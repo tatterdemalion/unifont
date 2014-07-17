@@ -16,7 +16,6 @@
 <script>
 $(document).ready(function(){
     $('#in').on('input', function(){
-        console.log($(this).val());
         $.get('/convert/',
               {'text': $(this).val(), 'font': window.location.hash.substring(1)},
               function(data){$('#out').html(data);}
